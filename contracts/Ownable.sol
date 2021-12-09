@@ -5,7 +5,7 @@ contract Ownable {
     address payable _owner;
 
     constructor() public {
-        _owner = msg.sender;
+        _owner = payable(msg.sender);
     }
 
     modifier onlyOwner() {
